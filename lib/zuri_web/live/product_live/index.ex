@@ -6,7 +6,10 @@ defmodule ZuriWeb.ProductLive.Index do
 
   @impl true
   def mount(_params, _session, socket) do
-    {:ok, stream(socket, :products, Catalog.list_products())}
+    {:ok,
+    socket
+    |> assign(:greeting, "Welcome to Zurish!")
+    |> stream(:products, Catalog.list_products())}
   end
 
   @impl true

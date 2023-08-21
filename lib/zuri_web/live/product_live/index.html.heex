@@ -1,5 +1,8 @@
 <.header>
   Listing Products
+    <:subtitle>
+    <%= @greeting %>
+    </:subtitle>
   <:actions>
     <.link patch={~p"/products/new"}>
       <.button>New Product</.button>

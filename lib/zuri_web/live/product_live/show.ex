@@ -12,6 +12,7 @@ defmodule ZuriWeb.ProductLive.Show do
   def handle_params(%{"id" => id}, _, socket) do
     {:noreply,
      socket
+     |> assign(:message, "hello pussies!")
      |> assign(:page_title, page_title(socket.assigns.live_action))
      |> assign(:product, Catalog.get_product!(id))}
   end
